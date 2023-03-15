@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.login);
         textViewMsg = findViewById(R.id.textViewMsg);
         mRootDatabaseRef = FirebaseDatabase.getInstance().getReference();
         mNodeRef = mRootDatabaseRef.child(node);
@@ -44,11 +44,5 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        mNodeRef.setValue(timestamp.toString());
-
     }
-
-
 }

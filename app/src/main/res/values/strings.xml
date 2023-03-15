@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyTestFireBaseApplication</string>
+    <string name="SUTDLIFE">SUTDLIFE</string>
 </resources>
