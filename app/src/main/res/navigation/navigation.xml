@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.hamburgermenu.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.hamburgermenu.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.hamburgermenu.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/FoodFragment"
+        android:name="com.example.hamburgermenu.FoodFragment"
+        android:label="fragment_home1"
+        tools:layout="@layout/fragment_food" />
+    <fragment
+        android:id="@+id/MarketplaceFragment"
+        android:name="com.example.hamburgermenu.MarketplaceFragment"
+        android:label="fragment_home2"
+        tools:layout="@layout/fragment_home2" />
+    <fragment
+        android:id="@+id/EventsFragment"
+        android:name="com.example.hamburgermenu.EventsFragment"
+        android:label="fragment_home3"
+        tools:layout="@layout/fragment_home3" />
+    <fragment
+        android:id="@+id/DiscussionsFragment"
+        android:name="com.example.hamburgermenu.DiscussionFragment"
+        android:label="fragment_home4"
+        tools:layout="@layout/fragment_home4" />
+    <fragment
+        android:id="@+id/tweetFragment"
+        android:name="com.example.hamburgermenu.TweetFragment"
+        android:label="fragment_tweet"
+        tools:layout="@layout/fragment_tweet" />
+    <fragment
+        android:id="@+id/ytSliderTest"
+        android:name="com.example.hamburgermenu.ytSliderTest"
+        android:label="fragment_yt_slider_test"
+        tools:layout="@layout/fragment_yt_slider_test" />
+    <fragment
+        android:id="@+id/testcodeFragment"
+        android:name="com.example.hamburgermenu.testcodeFragment"
+        android:label="fragment_testcode"
+        tools:layout="@layout/fragment_testcode" />
+</navigation>
