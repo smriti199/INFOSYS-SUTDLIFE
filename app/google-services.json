@@ -1,71 +1,33 @@
 {
   "project_info": {
-    "project_number": "79160665703",
-    "firebase_url": "https://sutdlife-eeda3-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "sutdlife-eeda3",
-    "storage_bucket": "sutdlife-eeda3.appspot.com"
+    "project_number": "743918993566",
+    "project_id": "sutd-lyfe",
+    "storage_bucket": "sutd-lyfe.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:79160665703:android:3f31b33504f21e4339d6c2",
+        "mobilesdk_app_id": "1:743918993566:android:b8fc2abb7e477aae8f7b8f",
         "android_client_info": {
-          "package_name": "com.example.sutdlife"
+          "package_name": "com.example.hamburgermenu"
         }
       },
       "oauth_client": [
         {
-          "client_id": "79160665703-61q42dallegnn2o6oobbo19vtvv8s0g2.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.sutdlife",
-            "certificate_hash": "949021bf858179ca86b6f8c3a7a3a06404a8537e"
-          }
-        },
-        {
-          "client_id": "79160665703-gphvbce9g174gvfsn1o4mufgpb8mfmnc.apps.googleusercontent.com",
+          "client_id": "743918993566-mgi9tg5ltlggt01lc8h6q5fep5jduvrt.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDheMjtIJz6SFzNSDDq9kf8UgJTSRaI1V0"
+          "current_key": "AIzaSyD56y2WlTldi77Q2m_iw2hkHLftfQVz5GA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "79160665703-gphvbce9g174gvfsn1o4mufgpb8mfmnc.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:79160665703:android:73d0203a9ae190c339d6c2",
-        "android_client_info": {
-          "package_name": "com.marcs.sutdlyfe"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "79160665703-gphvbce9g174gvfsn1o4mufgpb8mfmnc.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDheMjtIJz6SFzNSDDq9kf8UgJTSRaI1V0"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "79160665703-gphvbce9g174gvfsn1o4mufgpb8mfmnc.apps.googleusercontent.com",
+              "client_id": "743918993566-mgi9tg5ltlggt01lc8h6q5fep5jduvrt.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

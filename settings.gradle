@@ -1,12 +1,25 @@
 import org.gradle.api.initialization.resolve.RepositoriesMode
 
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+pluginManagement {
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
+        gradlePluginPortal()
+        maven { url 'https://jitpack.io'}
     }
+
 }
-rootProject.name = "SUTDLyfe"
+//dependencyResolutionManagement {
+//    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+//    repositories {
+//        google()
+//        mavenCentral()
+//        maven { url 'https://jitpack.io'}
+//    }
+//}
+
+
+
+
+rootProject.name = "Hamburger Menu"
 include ':app'
