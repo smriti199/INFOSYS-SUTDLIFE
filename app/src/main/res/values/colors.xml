@@ -7,8 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="maroon">#800000</color>
-    <color name="rose">#E3242B</color>
-    <color name="red">#D0312D</color>
+    <color name="orange1">#F4845A</color>
+    <color name="orange2">#F0A747</color>
+    <color name="orange3">#FBCD7F</color>
+    <color name="beige">#F1E8CD</color>
+    <color name="backgroundcolor">#FEFEF9</color>
 
 </resources>
