@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -39,6 +40,35 @@ public class  HomeFragment extends Fragment {
         slideModels.add( new SlideModel(R.drawable.resistor, ScaleTypes.FIT));
 
         imageSlider.setImageList(slideModels,ScaleTypes.FIT);
+        CardView dashFood = view.findViewById(R.id.dashboardFood);
+        CardView dashMarketplace = view.findViewById(R.id.dashboardMarketplace);
+        CardView dashEvents = view.findViewById(R.id.dashboardEvents);
+        CardView dashDiscussions = view.findViewById(R.id.dashboardDiscussions);
+
+        dashFood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate( R.id.FoodFragment);
+            }
+        });
+        dashMarketplace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate( R.id.MarketplaceFragment);
+            }
+        });
+        dashEvents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate( R.id.EventsFragment);
+            }
+        });
+        dashDiscussions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate( R.id.DiscussionsFragment);
+            }
+        });
     }
 
 }

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige"
+    tools:context=".RegistrationFragment">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="124dp"
+        android:layout_height="111dp"
+        android:layout_marginTop="64dp"
+        android:src="@mipmap/sutd_lyfe_round"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/regInputPassword"
+        android:layout_width="300dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/regInputEmail"
+        tools:ignore="TextFields" />
+
+    <EditText
+        android:id="@+id/regConfirmPassword"
+        android:layout_width="300dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/regInputPassword"
+        tools:ignore="TextFields" />
+
+    <EditText
+        android:id="@+id/regInputEmail"
+        android:layout_width="300dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <Button
+        android:id="@+id/registered"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/register"
+        android:backgroundTint="@color/orange2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/regConfirmPassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
