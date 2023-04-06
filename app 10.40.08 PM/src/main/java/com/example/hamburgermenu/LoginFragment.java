@@ -19,10 +19,17 @@ public class  LoginFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         Button login = view.findViewById(R.id.login);
+        Button register = view.findViewById(R.id.register);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Navigation.findNavController(v).navigate( R.id.HomeFragment);
+            }
+        });
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate( R.id.registrationFragment);
             }
         });
     }

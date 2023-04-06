@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginFragment"
-    android:background="@color/backgroundcolor">
+    android:background="@color/beige">
 
     <EditText
         android:id="@+id/inputPassword"
@@ -64,7 +64,7 @@
         android:layout_width="124dp"
         android:layout_height="111dp"
         android:layout_marginTop="64dp"
-        android:src="@mipmap/ic_launcher"
+        android:src="@mipmap/sutd_lyfe_round"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
