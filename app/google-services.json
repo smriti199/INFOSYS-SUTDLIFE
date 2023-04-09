@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "743918993566",
-    "project_id": "sutd-lyfe",
-    "storage_bucket": "sutd-lyfe.appspot.com"
+    "project_number": "728586172584",
+    "project_id": "sutd-lyfe-15801",
+    "storage_bucket": "sutd-lyfe-15801.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:743918993566:android:b8fc2abb7e477aae8f7b8f",
+        "mobilesdk_app_id": "1:728586172584:android:ed18353897bb5c49b66a9d",
         "android_client_info": {
           "package_name": "com.example.hamburgermenu"
         }
       },
       "oauth_client": [
         {
-          "client_id": "743918993566-mgi9tg5ltlggt01lc8h6q5fep5jduvrt.apps.googleusercontent.com",
+          "client_id": "728586172584-iad6m8pecrirddqoofnid4apcddtv5bn.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD56y2WlTldi77Q2m_iw2hkHLftfQVz5GA"
+          "current_key": "AIzaSyAjgWySoUvA1o713ThJcMmkaahl3I2-nI4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "743918993566-mgi9tg5ltlggt01lc8h6q5fep5jduvrt.apps.googleusercontent.com",
+              "client_id": "728586172584-iad6m8pecrirddqoofnid4apcddtv5bn.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

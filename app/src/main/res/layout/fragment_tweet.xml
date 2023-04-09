@@ -10,15 +10,16 @@
 
     <EditText
         android:id="@+id/editTextTextMultiLine"
-        android:layout_width="387dp"
-        android:layout_height="406dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="394dp"
+        android:layout_height="203dp"
+        android:layout_marginTop="388dp"
+        android:background="@color/white"
         android:ems="10"
         android:gravity="start|top"
-        android:background="@color/white"
         android:hint="@string/tweet"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
