@@ -21,6 +21,8 @@ public class FoodFragment extends Fragment implements FetchDataTask.DataListener
     RecyclerView recyclerView;
     RecycleViewAdapter adapter;
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -30,6 +32,8 @@ public class FoodFragment extends Fragment implements FetchDataTask.DataListener
     }
 
     public void onViewCreated(View view, Bundle savedInstanceState) {
+
+
 
         Button home = view.findViewById(R.id.buttontohome);
         home.setOnClickListener(new View.OnClickListener() {
