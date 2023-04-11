@@ -16,6 +16,7 @@
     <string name="marketplace">Marketplace</string>
     <string name="discussions">Discussions</string>
     <string name="events">Events</string>
+    <string name="Arduino_Uno">Arduino</string>
 
 
     <string-array name="newsTitlesArray">

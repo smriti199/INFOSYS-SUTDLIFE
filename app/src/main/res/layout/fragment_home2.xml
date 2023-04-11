@@ -8,22 +8,36 @@
     android:background="@color/beige"
     tools:context=".MarketplaceFragment">
 
-    <TextView
-        android:id="@+id/home2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="this is homepage category 2"
-        app:layout_constraintBottom_toBottomOf="parent"
+<!--    <Button-->
+<!--        android:id="@+id/buttontohome"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:text="Back to home"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/home2"-->
+<!--        app:layout_constraintVertical_bias="0.9" />-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dataList"
+        android:layout_width="414dp"
+        android:layout_height="646dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <Button
-        android:id="@+id/buttontohome"
+        android:id="@+id/create_listing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back to home"
+        android:layout_marginBottom="16dp"
+        android:text="Create Listing"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home2" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
