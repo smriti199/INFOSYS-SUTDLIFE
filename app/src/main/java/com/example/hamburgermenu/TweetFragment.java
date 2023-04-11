@@ -1,6 +1,7 @@
 package com.example.hamburgermenu;
 
 import android.app.Activity;
+import java.util.Random;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
@@ -36,6 +37,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.util.HashMap;
+
 public class TweetFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
@@ -44,30 +47,28 @@ public class TweetFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    final int PICK_IMAGE_REQUEST = 1;
+    private String listing_title;
 
-    //Button btn_upload = getView().getRootView().findViewById(R.id.btn_upload); // Button that refers to the image selection button in posting tweet page
+    private String listing_userID;
 
+    private String listing_information;
+
+    private String listing_price;
     private Button btn_upload;
     private ImageView image_view;
     private Uri imageUri;
 
     private FirebaseAuth mAuth;
-
     private DatabaseReference mDatabase;
 
+    private String listingID;
 
-// ...
     FirebaseStorage storage = FirebaseStorage.getInstance("gs://sutd-lyfe-15801.appspot.com");
-
     StorageReference storageRef = storage.getReference();
-
-
 
     public TweetFragment() {
         // Required empty public constructor
     }
-
     public static TweetFragment newInstance(String param1, String param2) {
         TweetFragment fragment = new TweetFragment();
         Bundle args = new Bundle();
@@ -77,13 +78,20 @@ public class TweetFragment extends Fragment {
         return fragment;
     }
 
+
+    public static String generateRandomString() {
+        Random random = new Random();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < 10; i++) {
+            sb.append(random.nextInt(10));
+        }
+        return sb.toString();
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
-
         super.onCreate(savedInstanceState);
-
-
 
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
@@ -108,28 +116,48 @@ public class TweetFragment extends Fragment {
             public void onClick(View view) {
                 System.out.println("Registered");
                 if (imageUri != null) {
+
+                    String listingID  = generateRandomString();
                     System.out.println(imageUri);
 
                     System.out.println("Sending to Firebase");
                     mDatabase = FirebaseDatabase.getInstance("https://sutd-lyfe-15801-default-rtdb.asia-southeast1.firebasedatabase.app").getReference();
 
-                    DataClass newImage = new DataClass(imageUri);
 
-                    // mDatabase.child("images").child("Test").setValue("hi");
+                    EditText listingInfoEditText = getActivity().findViewById(R.id.listing_information);
+                    listing_information = listingInfoEditText.getText().toString();
 
-                    storageRef.child("images/myImage.jpg").putFile(imageUri)
-                            .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                                @Override
-                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                    System.out.println("Success");
-                                }
-                            })
-                            .addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    System.out.println("Fail");
-                                }
-                            });
+                    System.out.println(listing_information);
+
+                    EditText listingPriceEditText = getActivity().findViewById(R.id.listing_price);
+                    listing_price = listingPriceEditText.getText().toString();
+
+                    System.out.println(listing_price);
+
+                    EditText listingTitleEditText = getActivity().findViewById(R.id.listing_title);
+                    listing_title = listingTitleEditText.getText().toString();
+                    listing_userID= "";
+
+
+
+                    Tweet newTweet = new Tweet(listingID,imageUri,listing_title,listing_price,listing_information,listing_userID);
+
+                    newTweet.uploadToFirebase();
+
+
+//                    storageRef.child("images/myImage.jpg").putFile(newTweet)
+//                            .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+//                                @Override
+//                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+//                                    System.out.println("Success");
+//                                }
+//                            })
+//                            .addOnFailureListener(new OnFailureListener() {
+//                                @Override
+//                                public void onFailure(@NonNull Exception e) {
+//                                    System.out.println("Fail");
+//                                }
+//                            });
 
 
                //  uploadImageToFirebase(imageUri);
@@ -168,6 +196,8 @@ public class TweetFragment extends Fragment {
         });
 
 
+
+
         return view;
     }
 
@@ -175,37 +205,3 @@ public class TweetFragment extends Fragment {
 
 
 }
-
-//    private void uploadToFirebase(Uri uri) {
-//        final StorageReference imageReference = storageReference.child(System.currentTimeMillis() + "." + getFileExtension(uri));
-//        imageReference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//            @Override
-//            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//                DataClass dataClass = new DataClass(uri.toString());
-//                String key = databaseReference.push().getKey();
-//                databaseReference.child(key).setValue(dataClass);
-//
-//                Intent intent = new Intent(getActivity(), MainActivity.class);
-//                startActivity(intent);
-//                getActivity().finish();
-//            }
-//        });
-//    }
-
-
-
-//    private String getFileExtension(Uri uri) {
-//        ContentResolver contentResolver = getContext().getContentResolver();
-//        MimeTypeMap mime = MimeTypeMap.getSingleton();
-//        return mime.getExtensionFromMimeType(contentResolver.getType(uri));
-//    }
-//
-//    private void updateUI(FirebaseUser user) {
-//        if (user != null) {
-//            // User is signed in
-//        } else {
-//            // User is signed out
-//        }
-//    }
-//
-//}
