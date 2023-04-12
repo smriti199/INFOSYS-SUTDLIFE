@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hamburger Menu</string>
+    <string name="app_name">SUTDLYFE</string>
     <string name="open">Open Navigation Drawer</string>
     <string name="close">Close Navigation Drawer</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -16,7 +16,9 @@
     <string name="marketplace">Marketplace</string>
     <string name="discussions">Discussions</string>
     <string name="events">Events</string>
-
+    <string name="product_name">Product Name</string>
+    <string name="seller_nickname">Seller Nickname</string>
+    <string name="price">Price</string>
 
     <string-array name="newsTitlesArray">
         <item>testmarket1</item>
