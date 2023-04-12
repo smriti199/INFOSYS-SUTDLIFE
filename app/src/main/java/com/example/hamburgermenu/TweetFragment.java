@@ -1,40 +1,30 @@
 package com.example.hamburgermenu;
 
 import android.app.Activity;
-import android.content.ContentResolver;
+import java.util.Random;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageSwitcher;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 
 public class TweetFragment extends Fragment {
 
@@ -44,30 +34,28 @@ public class TweetFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    final int PICK_IMAGE_REQUEST = 1;
+    private String listing_title;
 
-    //Button btn_upload = getView().getRootView().findViewById(R.id.btn_upload); // Button that refers to the image selection button in posting tweet page
+    private String listing_userID;
 
+    private String listing_information;
+
+    private String listing_price;
     private Button btn_upload;
     private ImageView image_view;
     private Uri imageUri;
 
     private FirebaseAuth mAuth;
-
     private DatabaseReference mDatabase;
 
+    private String listingID;
 
-// ...
     FirebaseStorage storage = FirebaseStorage.getInstance("gs://sutd-lyfe-15801.appspot.com");
-
     StorageReference storageRef = storage.getReference();
-
-
 
     public TweetFragment() {
         // Required empty public constructor
     }
-
     public static TweetFragment newInstance(String param1, String param2) {
         TweetFragment fragment = new TweetFragment();
         Bundle args = new Bundle();
@@ -77,13 +65,20 @@ public class TweetFragment extends Fragment {
         return fragment;
     }
 
+
+    public static String generateRandomString() {
+        Random random = new Random();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < 10; i++) {
+            sb.append(random.nextInt(10));
+        }
+        return sb.toString();
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
-
         super.onCreate(savedInstanceState);
-
-
 
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
@@ -108,31 +103,34 @@ public class TweetFragment extends Fragment {
             public void onClick(View view) {
                 System.out.println("Registered");
                 if (imageUri != null) {
+
+                    String listingID  = generateRandomString();
                     System.out.println(imageUri);
 
                     System.out.println("Sending to Firebase");
                     mDatabase = FirebaseDatabase.getInstance("https://sutd-lyfe-15801-default-rtdb.asia-southeast1.firebasedatabase.app").getReference();
 
-                    DataClass newImage = new DataClass(imageUri);
 
-                    // mDatabase.child("images").child("Test").setValue("hi");
+                    EditText listingInfoEditText = getActivity().findViewById(R.id.listing_information);
+                    listing_information = listingInfoEditText.getText().toString();
 
-                    storageRef.child("images/myImage.jpg").putFile(imageUri)
-                            .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                                @Override
-                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                    System.out.println("Success");
-                                }
-                            })
-                            .addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    System.out.println("Fail");
-                                }
-                            });
+                    System.out.println(listing_information);
 
 
-               //  uploadImageToFirebase(imageUri);
+                    listing_price = "0";
+
+                    System.out.println(listing_price);
+
+                    EditText listingTitleEditText = getActivity().findViewById(R.id.listing_title);
+                    listing_title = listingTitleEditText.getText().toString();
+                    listing_userID= "";
+
+
+
+                    Tweet newTweet = new Tweet(listingID,imageUri,listing_title,listing_information,listing_information,listing_userID);
+
+                    newTweet.uploadToFirebase();
+
 
                 } else {
                     // Handle error
@@ -168,6 +166,8 @@ public class TweetFragment extends Fragment {
         });
 
 
+
+
         return view;
     }
 
@@ -175,37 +175,3 @@ public class TweetFragment extends Fragment {
 
 
 }
-
-//    private void uploadToFirebase(Uri uri) {
-//        final StorageReference imageReference = storageReference.child(System.currentTimeMillis() + "." + getFileExtension(uri));
-//        imageReference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//            @Override
-//            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//                DataClass dataClass = new DataClass(uri.toString());
-//                String key = databaseReference.push().getKey();
-//                databaseReference.child(key).setValue(dataClass);
-//
-//                Intent intent = new Intent(getActivity(), MainActivity.class);
-//                startActivity(intent);
-//                getActivity().finish();
-//            }
-//        });
-//    }
-
-
-
-//    private String getFileExtension(Uri uri) {
-//        ContentResolver contentResolver = getContext().getContentResolver();
-//        MimeTypeMap mime = MimeTypeMap.getSingleton();
-//        return mime.getExtensionFromMimeType(contentResolver.getType(uri));
-//    }
-//
-//    private void updateUI(FirebaseUser user) {
-//        if (user != null) {
-//            // User is signed in
-//        } else {
-//            // User is signed out
-//        }
-//    }
-//
-//}

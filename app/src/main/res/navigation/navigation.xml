@@ -55,4 +55,9 @@
         android:name="com.example.hamburgermenu.testcodeFragment"
         android:label="fragment_testcode"
         tools:layout="@layout/fragment_testcode" />
+    <fragment
+        android:id="@+id/listing"
+        android:name="com.example.hamburgermenu.listing"
+        android:label="fragment_listing"
+        tools:layout="@layout/fragment_listing" />
 </navigation>
