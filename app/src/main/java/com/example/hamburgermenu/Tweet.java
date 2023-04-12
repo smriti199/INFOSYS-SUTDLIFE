@@ -78,7 +78,7 @@ public class Tweet {
         StorageReference storageRef = FirebaseStorage.getInstance().getReference();
         StorageReference imageRef = storageRef.child(pathBuilderImages(listingID));
         UploadTask uploadTask = imageRef.putFile(imageUri);
-        storageRef.child("images/myImage.jpg").putFile(imageUri);
+
         System.out.println("Uploading finished");
 
 

@@ -2,42 +2,29 @@ package com.example.hamburgermenu;
 
 import android.app.Activity;
 import java.util.Random;
-import android.content.ContentResolver;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageSwitcher;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
-
-import java.util.HashMap;
 
 public class TweetFragment extends Fragment {
 
@@ -129,8 +116,8 @@ public class TweetFragment extends Fragment {
 
                     System.out.println(listing_information);
 
-                    EditText listingPriceEditText = getActivity().findViewById(R.id.listing_price);
-                    listing_price = listingPriceEditText.getText().toString();
+
+                    listing_price = "0";
 
                     System.out.println(listing_price);
 
@@ -140,27 +127,10 @@ public class TweetFragment extends Fragment {
 
 
 
-                    Tweet newTweet = new Tweet(listingID,imageUri,listing_title,listing_price,listing_information,listing_userID);
+                    Tweet newTweet = new Tweet(listingID,imageUri,listing_title,listing_information,listing_information,listing_userID);
 
                     newTweet.uploadToFirebase();
 
-
-//                    storageRef.child("images/myImage.jpg").putFile(newTweet)
-//                            .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//                                @Override
-//                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//                                    System.out.println("Success");
-//                                }
-//                            })
-//                            .addOnFailureListener(new OnFailureListener() {
-//                                @Override
-//                                public void onFailure(@NonNull Exception e) {
-//                                    System.out.println("Fail");
-//                                }
-//                            });
-
-
-               //  uploadImageToFirebase(imageUri);
 
                 } else {
                     // Handle error

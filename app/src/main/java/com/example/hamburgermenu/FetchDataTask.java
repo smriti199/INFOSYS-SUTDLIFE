@@ -25,7 +25,7 @@ public class FetchDataTask extends AsyncTask<Void, Void, ServerData> {
         try {
             // Create a URL object for the desired URL
             System.out.println("Registered");
-            URL url = new URL("https://sutd-lyfe-default-rtdb.asia-southeast1.firebasedatabase.app/Food.json");
+            URL url = new URL("https://sutd-lyfe-15801-default-rtdb.asia-southeast1.firebasedatabase.app/Listing.json");
 
             // Open a connection to the URL
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
@@ -54,9 +54,15 @@ public class FetchDataTask extends AsyncTask<Void, Void, ServerData> {
             ArrayList<String> newsDate = new ArrayList<String>();
 
             while (keys.hasNext()) {
+                // date becomes information
+                // name becomes title
+
+
+
                 String key = keys.next();
-                newsTitle.add(key);
-                newsDate.add(jsonObj.getString(key));
+
+                newsTitle.add(jsonObj.getJSONObject(key).getString("title"));
+                newsDate.add(jsonObj.getJSONObject(key).getString("information"));
             }
 
             String[] newsTitleArray = newsTitle.toArray(new String[0]);

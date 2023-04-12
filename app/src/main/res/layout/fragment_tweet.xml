@@ -21,17 +21,6 @@
         tools:layout_editor_absoluteX="18dp" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="248dp"
-        android:layout_height="42dp"
-        android:text="Price"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/listing_price"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.833"
-        tools:layout_editor_absoluteX="276dp" />
-
-    <TextView
         android:id="@+id/textView3"
         android:layout_width="186dp"
         android:layout_height="26dp"
@@ -62,7 +51,7 @@
         android:layout_height="214dp"
         android:layout_marginBottom="28dp"
         android:adjustViewBounds="true"
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         android:src="@drawable/placeholder"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,7 +63,7 @@
         android:layout_width="275dp"
         android:layout_height="42dp"
         android:layout_marginBottom="12dp"
-        android:text="Tell us more about your listing!"
+        android:text="Where can the food be found?"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/listing_information"
         tools:layout_editor_absoluteX="18dp" />
@@ -87,10 +76,9 @@
         android:background="@color/white"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="@string/tweet"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -105,19 +93,6 @@
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toTopOf="@+id/image_view"
         tools:layout_editor_absoluteX="18dp" />
-
-    <EditText
-        android:id="@+id/listing_price"
-        android:layout_width="116dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="64dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/image_view"
-        app:layout_constraintStart_toEndOf="@+id/listing_title" />
 
     <LinearLayout
         android:layout_width="match_parent"
