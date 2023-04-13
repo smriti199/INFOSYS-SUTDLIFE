@@ -1,4 +1,4 @@
-package com.example.hamburgermenu;
+package com.example.hamburgermenu.market;
 
 import android.net.Uri;
 

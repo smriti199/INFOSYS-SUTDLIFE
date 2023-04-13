@@ -1,4 +1,4 @@
-package com.example.hamburgermenu;
+package com.example.hamburgermenu.food;
 
 public class ServerData {
     static String[] newsTitle;

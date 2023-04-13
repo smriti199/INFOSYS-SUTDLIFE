@@ -1,4 +1,4 @@
-package com.example.hamburgermenu;
+package com.example.hamburgermenu.food;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,6 +11,11 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.hamburgermenu.MainActivity;
+import com.example.hamburgermenu.R;
+import com.example.hamburgermenu.RecycleViewAdapter;
+import com.example.hamburgermenu.news_banner;
+
 import java.util.ArrayList;
 
 
@@ -21,8 +26,6 @@ public class FoodFragment extends Fragment implements FetchDataTask.DataListener
     RecyclerView recyclerView;
     RecycleViewAdapter adapter;
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -30,10 +33,7 @@ public class FoodFragment extends Fragment implements FetchDataTask.DataListener
         ((MainActivity) getActivity()).setActionBarTitle("Food");
         return inflater.inflate(R.layout.fragment_food, container, false);
     }
-
     public void onViewCreated(View view, Bundle savedInstanceState) {
-
-
 
         Button home = view.findViewById(R.id.buttontohome);
         home.setOnClickListener(new View.OnClickListener() {

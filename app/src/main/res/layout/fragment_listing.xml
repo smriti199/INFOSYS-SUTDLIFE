@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/beige"
     android:backgroundTint="@color/beige"
-    tools:context=".listing">
+    tools:context=".market.listing">
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/information2"
@@ -110,13 +110,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.574"
         app:layout_constraintStart_toEndOf="@+id/textView11" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="558dp" />
 
     <TextView
         android:id="@+id/textView6"

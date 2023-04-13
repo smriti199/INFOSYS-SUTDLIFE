@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/beige"
-    tools:context=".FoodFragment">
+    tools:context=".food.FoodFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="380dp"
@@ -19,7 +19,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/news_recycle_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:background="@color/beige" />
     </androidx.cardview.widget.CardView>
 
     <Button

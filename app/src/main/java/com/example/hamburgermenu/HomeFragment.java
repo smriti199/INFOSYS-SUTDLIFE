@@ -21,7 +21,6 @@ import java.util.ArrayList;
 
 public class  HomeFragment extends Fragment {
     ArrayList<news_banner> news_banners = new ArrayList<>();
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ((MainActivity) getActivity()).setActionBarTitle("Home");
@@ -34,10 +33,10 @@ public class  HomeFragment extends Fragment {
         ImageSlider imageSlider = getView().findViewById(R.id.imageSlider);
         ArrayList<SlideModel> slideModels = new ArrayList<>();
 
-        slideModels.add( new SlideModel(R.drawable.gate, ScaleTypes.FIT));
-        slideModels.add( new SlideModel(R.drawable.resistor, ScaleTypes.FIT));
-        slideModels.add( new SlideModel(R.drawable.wire, ScaleTypes.FIT));
-        slideModels.add( new SlideModel(R.drawable.resistor, ScaleTypes.FIT));
+        slideModels.add( new SlideModel(R.drawable.sutd_campus, ScaleTypes.FIT));
+        slideModels.add( new SlideModel(R.drawable.sutd_community1, ScaleTypes.FIT));
+        slideModels.add( new SlideModel(R.drawable.sutd_community2, ScaleTypes.FIT));
+        slideModels.add( new SlideModel(R.drawable.sutd_community3, ScaleTypes.FIT));
 
         imageSlider.setImageList(slideModels,ScaleTypes.FIT);
         CardView dashFood = view.findViewById(R.id.dashboardFood);

@@ -1,4 +1,4 @@
-package com.example.hamburgermenu;
+package com.example.hamburgermenu.food;
 
 import android.app.Activity;
 import java.util.Random;
@@ -19,6 +19,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.fragment.app.Fragment;
 
+import com.example.hamburgermenu.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 import com.google.firebase.database.DatabaseReference;

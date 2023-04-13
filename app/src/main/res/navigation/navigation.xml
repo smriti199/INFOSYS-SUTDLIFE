@@ -22,27 +22,27 @@
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/FoodFragment"
-        android:name="com.example.hamburgermenu.FoodFragment"
+        android:name="com.example.hamburgermenu.food.FoodFragment"
         android:label="fragment_home1"
         tools:layout="@layout/fragment_food" />
     <fragment
         android:id="@+id/MarketplaceFragment"
-        android:name="com.example.hamburgermenu.MarketplaceFragment"
+        android:name="com.example.hamburgermenu.market.MarketplaceFragment"
         android:label="fragment_home2"
-        tools:layout="@layout/fragment_home2" />
+        tools:layout="@layout/fragment_marketplace" />
     <fragment
         android:id="@+id/EventsFragment"
-        android:name="com.example.hamburgermenu.EventsFragment"
+        android:name="com.example.hamburgermenu.news.NewsFragment"
         android:label="fragment_home3"
-        tools:layout="@layout/fragment_home3" />
+        tools:layout="@layout/fragment_news_main" />
     <fragment
         android:id="@+id/DiscussionsFragment"
         android:name="com.example.hamburgermenu.DiscussionFragment"
         android:label="fragment_home4"
-        tools:layout="@layout/fragment_home4" />
+        tools:layout="@layout/fragment_weather" />
     <fragment
         android:id="@+id/tweetFragment"
-        android:name="com.example.hamburgermenu.TweetFragment"
+        android:name="com.example.hamburgermenu.food.TweetFragment"
         android:label="fragment_tweet"
         tools:layout="@layout/fragment_tweet" />
     <fragment
@@ -57,7 +57,7 @@
         tools:layout="@layout/fragment_testcode" />
     <fragment
         android:id="@+id/listing"
-        android:name="com.example.hamburgermenu.listing"
+        android:name="com.example.hamburgermenu.market.listing"
         android:label="fragment_listing"
         tools:layout="@layout/fragment_listing" />
 </navigation>

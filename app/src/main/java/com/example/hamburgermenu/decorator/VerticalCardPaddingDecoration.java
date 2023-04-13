@@ -1,14 +1,14 @@
-package com.example.hamburgermenu;
+package com.example.hamburgermenu.decorator;
 
 import android.graphics.Rect;
 import android.view.View;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-public class CardPaddingDecoration extends RecyclerView.ItemDecoration {
+public class VerticalCardPaddingDecoration extends RecyclerView.ItemDecoration {
     private final int nPadding;
 
-    public CardPaddingDecoration(int Padding) {
+    public VerticalCardPaddingDecoration(int Padding) {
         this.nPadding = Padding;
     }
 
