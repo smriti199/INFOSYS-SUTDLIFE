@@ -6,12 +6,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.MyViewHolder> {
+public class RecycleViewAdapter<V extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<RecycleViewAdapter.MyViewHolder> {
 
 
     Context context;
@@ -24,10 +23,10 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
     @NonNull
     @Override
-    public RecycleViewAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // inflate layout here, giving a look to our rows
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.recycler_view_row,parent,false);
+        View view = inflater.inflate(R.layout.food_recycler_view,parent,false);
         return new RecycleViewAdapter.MyViewHolder(view);
     }
 
@@ -37,8 +36,6 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
         // based on the position of the view
         holder.newsTitle.setText(news_banners.get(position).getNewsTitle());
         holder.newsDate.setText(news_banners.get(position).getNewsDate());
-
-
     }
 
     @Override
@@ -46,6 +43,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
         // recycleview needs to know how many items we want displayed
         return news_banners.size();
     }
+
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         // kinda like oncreate, we are grabbing views from our recycle_view_row layout file
@@ -61,6 +59,10 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
     }
 
 
+    public class ViewHolder {
+        public ViewHolder(View view) {
+        }
+    }
 }
 
 //

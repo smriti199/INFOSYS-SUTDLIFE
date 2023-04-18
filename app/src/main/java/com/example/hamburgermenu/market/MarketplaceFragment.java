@@ -48,9 +48,6 @@ public class MarketplaceFragment extends Fragment {
 
 
         View rootView = inflater.inflate(R.layout.fragment_marketplace, container, false);
-        if (getActivity() != null) {
-            ((MainActivity) getActivity()).setActionBarTitle("MarketPlace");
-        }
 
         RecyclerView dataList = rootView.findViewById(R.id.dataList); // retrieve RecyclerView type dataList from fragment_home2.xml file
         dataList.setVisibility(View.VISIBLE);
@@ -145,8 +142,6 @@ public class MarketplaceFragment extends Fragment {
 
                 storageRef = storageRef.child("MarketplaceList/"+ListingInformation.get(0).get(0));
                 System.out.println(storageRef);
-
-
 
 
 //

@@ -23,7 +23,6 @@ public class  HomeFragment extends Fragment {
     ArrayList<news_banner> news_banners = new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ((MainActivity) getActivity()).setActionBarTitle("Home");
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
     @Override

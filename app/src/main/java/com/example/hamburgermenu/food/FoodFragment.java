@@ -24,13 +24,12 @@ public class FoodFragment extends Fragment implements FetchDataTask.DataListener
     ArrayList<news_banner> news_banners = new ArrayList<>();
 
     RecyclerView recyclerView;
-    RecycleViewAdapter adapter;
+    RecycleViewAdapter<RecyclerView.ViewHolder> adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        ((MainActivity) getActivity()).setActionBarTitle("Food");
         return inflater.inflate(R.layout.fragment_food, container, false);
     }
     public void onViewCreated(View view, Bundle savedInstanceState) {
@@ -66,10 +65,9 @@ public class FoodFragment extends Fragment implements FetchDataTask.DataListener
         setUpNewsBanner(newsTitleArray, newsDateArray);
 
         recyclerView = getView().findViewById(R.id.news_recycle_view);
-        adapter = new RecycleViewAdapter(this.getActivity() , news_banners);
+        adapter = new RecycleViewAdapter<RecyclerView.ViewHolder>(this.getActivity() , news_banners);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
-
     }
 
     private void setUpNewsBanner(String[] newsTitleArray, String[] newsDateArray) {

@@ -15,7 +15,6 @@ public class DiscussionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        ((MainActivity) getActivity()).setActionBarTitle("Discussions");
         return inflater.inflate(R.layout.fragment_weather, container, false);
     }
     public void onViewCreated(View view, Bundle savedInstanceState) {

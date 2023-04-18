@@ -14,11 +14,12 @@
     <string name="home">Home</string>
     <string name="food">Food</string>
     <string name="marketplace">Marketplace</string>
-    <string name="discussions">Discussions</string>
     <string name="events">Events</string>
     <string name="product_name">Product Name</string>
     <string name="seller_nickname">Seller Nickname</string>
     <string name="price">Price</string>
+    <string name="weather">Weather</string>
+    <string name="news">Newsletter</string>
 
     <string-array name="newsTitlesArray">
         <item>testmarket1</item>

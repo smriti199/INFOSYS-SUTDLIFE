@@ -50,11 +50,7 @@
         android:name="com.example.hamburgermenu.ytSliderTest"
         android:label="fragment_yt_slider_test"
         tools:layout="@layout/fragment_yt_slider_test" />
-    <fragment
-        android:id="@+id/testcodeFragment"
-        android:name="com.example.hamburgermenu.testcodeFragment"
-        android:label="fragment_testcode"
-        tools:layout="@layout/fragment_testcode" />
+
     <fragment
         android:id="@+id/listing"
         android:name="com.example.hamburgermenu.market.listing"

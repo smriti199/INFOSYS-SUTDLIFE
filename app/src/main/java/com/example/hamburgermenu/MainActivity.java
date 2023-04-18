@@ -34,14 +34,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setTitle("SUTD Lyfe");
-
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.design_navigation_view);
         drawerToggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView);
         NavController navController = navHostFragment.getNavController();
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -64,14 +61,14 @@ public class MainActivity extends AppCompatActivity {
                         navController.navigate(R.id.MarketplaceFragment);
                         break;
                     }
-                    case R.id.menuEvents:
+                    case R.id.menuNews:
                     {
-                        navController.navigate(R.id.EventsFragment);
+                        navController.navigate(R.id.menuNews);
                         break;
                     }
-                    case R.id.menuDiscussions:
+                    case R.id.menuWeather:
                     {
-                        navController.navigate(R.id.DiscussionsFragment);
+                        navController.navigate(R.id.menuWeather);
                         break;
                     }
                     case R.id.Privacy:
@@ -101,8 +98,5 @@ public class MainActivity extends AppCompatActivity {
         else{
             super.onBackPressed();
         }
-    }
-    public void setActionBarTitle(String title){
-        getSupportActionBar().setTitle(title);
     }
 }
