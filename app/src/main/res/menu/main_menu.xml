@@ -14,13 +14,13 @@
             android:icon="@drawable/noun_market_1637656"
             android:title="@string/marketplace"
             />
-        <item android:id="@+id/menuEvents"
+        <item android:id="@+id/menuNews"
             android:icon="@drawable/baseline_settings_24"
-            android:title="@string/events"
+            android:title="@string/news"
             />
-        <item android:id="@+id/menuDiscussions"
+        <item android:id="@+id/menuWeather"
             android:icon="@drawable/baseline_settings_24"
-            android:title="@string/discussions"
+            android:title="@string/weather"
             />
 
     </group>

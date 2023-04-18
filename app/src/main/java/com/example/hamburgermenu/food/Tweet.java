@@ -6,7 +6,7 @@
 
 
 
-package com.example.hamburgermenu;
+package com.example.hamburgermenu.food;
 
 import android.net.Uri;
 import android.provider.ContactsContract;
