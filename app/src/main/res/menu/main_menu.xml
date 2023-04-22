@@ -22,6 +22,9 @@
             android:icon="@drawable/baseline_settings_24"
             android:title="@string/weather"
             />
+        <item
+            android:id="@+id/menuLogout"
+            android:title="Log out" />
 
     </group>
     <item android:title="Profile">

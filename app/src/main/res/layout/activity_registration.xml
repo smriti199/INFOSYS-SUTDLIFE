@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="20dp"
+    android:padding="10dp"
     android:background="@color/backgroundcolor"
     tools:context=".LoginPage">
 
@@ -18,45 +18,46 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:gravity="center"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="30dp"
         ></TextView>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/rounded_text"
         app:boxBackgroundMode="none"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="20dp">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:id="@+id/email"
             android:hint="@string/email" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/rounded_text"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         app:boxBackgroundMode="none">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:id="@+id/password_editText"
-            android:hint="@string/password"/>
+            android:hint="@string/password"
+            android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:hint="Confirm Password">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/confirm_password_editText"
             android:background="@drawable/rounded_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:inputType="textPassword"/>
 
     </com.google.android.material.textfield.TextInputLayout>

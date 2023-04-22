@@ -18,9 +18,9 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
-public class GridViewAdapter extends RecyclerView.Adapter<GridViewAdapter.ViewHolder>{
+public class marketViewAdapter extends RecyclerView.Adapter<marketViewAdapter.ViewHolder>{
     // ViewHolder is a wrapper (able to call onto multiple f(x)) that contains the layout for an individual item in the list
-    // The Adapter (GridViewAdapter) creates ViewHolder objects as needed and sets data for those views. Hence we associate views to their data
+    // The Adapter (marketViewAdapter) creates ViewHolder objects as needed and sets data for those views. Hence we associate views to their data
     Context context;
     private ArrayList<String> titles;
     private ArrayList<String> prices;
@@ -31,8 +31,8 @@ public class GridViewAdapter extends RecyclerView.Adapter<GridViewAdapter.ViewHo
     LayoutInflater inflater; // custom layout design
 
     // Constructor for the class below
-    public GridViewAdapter(Context context, ArrayList<String> titles, ArrayList<String> prices,
-                           ArrayList<String> sellers, ArrayList<String> images) {
+    public marketViewAdapter(Context context, ArrayList<String> titles, ArrayList<String> prices,
+                             ArrayList<String> sellers, ArrayList<String> images) {
         this.context = context;
         this.titles = titles;
         this.images = images;
@@ -42,7 +42,7 @@ public class GridViewAdapter extends RecyclerView.Adapter<GridViewAdapter.ViewHo
     }
     @NonNull
     @Override
-    public GridViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public marketViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         System.out.println(this.images);
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.marketplace_custom_layout, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
@@ -50,7 +50,7 @@ public class GridViewAdapter extends RecyclerView.Adapter<GridViewAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull GridViewAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull marketViewAdapter.ViewHolder holder, int position) {
 
         FirebaseStorage storage = FirebaseStorage.getInstance();
         String image = images.get(position);
@@ -60,8 +60,6 @@ public class GridViewAdapter extends RecyclerView.Adapter<GridViewAdapter.ViewHo
         String title = titles.get(position);
         String price = prices.get(position);
         String seller = sellers.get(position);
-
-
 
         holder.title.setText(title);
         holder.price.setText(price);
@@ -99,7 +97,7 @@ public class GridViewAdapter extends RecyclerView.Adapter<GridViewAdapter.ViewHo
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.textView);
-            image = (ImageView) itemView.findViewById(R.id.imageView2);
+            image = (ImageView) itemView.findViewById(R.id.foodImage);
             price = (TextView) itemView.findViewById(R.id.item_price);
             seller = (TextView) itemView.findViewById(R.id.item_seller);
         }
