@@ -34,8 +34,8 @@
         <item>Ban Mian</item>
         <item>Nasi Lemak</item>
         <item>Pizza</item>
-        <item>Kimchi Ramen</item>
-        <item>Mixed Rice</item>
+        <item>Seng Kee Herbal Chicken Soup</item>
+        <item>Labula Mala Hotpot</item>
 
     </string-array>
     <string-array name="locationArray">
@@ -45,8 +45,8 @@
         <item>Canteen</item>
         <item>Canteen</item>
         <item>DStar Bistro</item>
-        <item>Canteen</item>
-        <item>Canteen</item>
+        <item>475 Changi Rd, S(419892)</item>
+        <item>822 Tampines Street 81, S(520822)</item>
     </string-array>
 
 </resources>

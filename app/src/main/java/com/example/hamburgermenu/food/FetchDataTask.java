@@ -63,9 +63,8 @@ public class FetchDataTask extends AsyncTask<Void, Void, ServerData> {
             String[] locationArray = newsDate.toArray(new String[0]);
             String[] foodImageArray = newsDate.toArray(new String[0]);
 
-
             // Return the JSON data as a string
-            ServerData returnData = new ServerData(String[] foodTitleArray, String[] locationArray, String[] foodImageArray);
+            ServerData returnData = new ServerData(foodTitleArray, locationArray, foodImageArray);
             return returnData;
 
         } catch (Exception e) {

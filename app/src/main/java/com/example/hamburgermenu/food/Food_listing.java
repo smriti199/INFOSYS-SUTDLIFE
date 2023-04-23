@@ -5,10 +5,9 @@ import android.widget.ImageView;
 public class Food_listing {
     String foodTitle;
     String location;
-    String foodImage; // pat to work on this
+    int foodImage;
 
-
-    public Food_listing(String foodTitle, String location, String foodImage) {
+    public Food_listing(String foodTitle, String location, int foodImage) {
         this.foodTitle = foodTitle;
         this.location = location;
         this.foodImage = foodImage;
@@ -22,7 +21,7 @@ public class Food_listing {
         return location;
     }
 
-    public String getFoodImage() {
+    public int getFoodImage() {
         return foodImage;
     }
 }

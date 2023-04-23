@@ -27,7 +27,7 @@ public class RecycleViewAdapter<V extends RecyclerView.ViewHolder> extends Recyc
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // inflate layout here, giving a look to our rows
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.food_recycler_view,parent,false);
+        View view = inflater.inflate(R.layout.food_recyclerview_row,parent,false);
         return new RecycleViewAdapter.MyViewHolder(view);
     }
 
@@ -37,6 +37,7 @@ public class RecycleViewAdapter<V extends RecyclerView.ViewHolder> extends Recyc
         // based on the position of the view
         holder.foodItem.setText(Food_listings.get(position).getFoodTitle());
         holder.location.setText(Food_listings.get(position).getLocation());
+        holder.foodImage.setImageResource(Food_listings.get(position).getFoodImage());
     }
 
     @Override

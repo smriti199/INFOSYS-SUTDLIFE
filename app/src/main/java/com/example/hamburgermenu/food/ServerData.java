@@ -5,7 +5,6 @@ public class ServerData {
     static String[] locationArray;
     static String[] foodImageArray;
 
-
     //Constructor Method
     public ServerData(String[] foodTitleArray, String[] locationArray, String[] foodImageArray) {
         this.foodTitleArray = foodTitleArray;

@@ -18,18 +18,25 @@ import java.util.ArrayList;
 
 public class FoodFragment extends Fragment implements FetchDataTask.DataListener {
     ArrayList<Food_listing> food_listings = new ArrayList<>();
-    RecyclerView recyclerView;
+
+    int[] food_images = {R.drawable.hamburger, R.drawable.japanese_sandwiches, R.drawable.chicken_rice,
+            R.drawable.ban_mian, R.drawable.nasi_lemak, R.drawable.pizza, R.drawable.herbal_chicken_soup,
+            R.drawable.mala_hotpot};
+
     RecycleViewAdapter<RecyclerView.ViewHolder> adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment -- food fragment which simply contains the recyclerview
+        setUpFoodListings();
         return inflater.inflate(R.layout.fragment_food, container, false);
     }
 
     public void onViewCreated(View view, Bundle savedInstanceState) {
         Button home = view.findViewById(R.id.buttontohome);
+
+
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,9 +56,15 @@ public class FoodFragment extends Fragment implements FetchDataTask.DataListener
         task.execute(); // Start the task
     }
 
+    // local implementation
     private void setUpFoodListings() {
         String[] foodTitleArray = getResources().getStringArray(R.array.foodTitleArray);
         String[] foodLocationArray = getResources().getStringArray(R.array.locationArray);
+
+        for (int i=0; i< foodTitleArray.length; i++) {
+            food_listings.add(new Food_listing(foodTitleArray[i], foodLocationArray[i], food_images[i])); // an array of Food_listing objects
+
+        }
     }
 
     // for real time database implementation
