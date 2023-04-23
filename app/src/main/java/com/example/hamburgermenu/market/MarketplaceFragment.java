@@ -12,7 +12,6 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.hamburgermenu.MainActivity;
 import com.example.hamburgermenu.R;
 import com.example.hamburgermenu.decorator.VerticalCardPaddingDecoration;
 import com.google.firebase.database.DataSnapshot;
@@ -29,7 +28,7 @@ import java.util.HashMap;
 public class MarketplaceFragment extends Fragment {
 
     private Button postLsiting;
-    private GridViewAdapter adapter;
+    private marketViewAdapter adapter;
     private ArrayList<String> titles = new ArrayList<>();
     private ArrayList<String> prices = new ArrayList<>();
 
@@ -150,7 +149,7 @@ public class MarketplaceFragment extends Fragment {
 //                images.add(R.drawable.corsair_ddr4_64gb_ram);
 
 
-                adapter = new GridViewAdapter(getContext(), titles, prices, sellers, images);
+                adapter = new marketViewAdapter(getContext(), titles, prices, sellers, images);
                 dataList.setAdapter(adapter);
                 adapter.setData(titles, prices, sellers, images);
                 int padding = getResources().getDimensionPixelSize(R.dimen.card_padding);

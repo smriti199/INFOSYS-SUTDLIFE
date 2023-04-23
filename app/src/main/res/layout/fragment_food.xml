@@ -9,9 +9,9 @@
     tools:context=".food.FoodFragment">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="380dp"
-        android:layout_height="500dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="350dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">

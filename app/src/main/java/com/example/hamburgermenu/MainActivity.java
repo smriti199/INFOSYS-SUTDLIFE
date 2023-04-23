@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login_page);
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.design_navigation_view);
         drawerToggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close);
@@ -71,6 +71,13 @@ public class MainActivity extends AppCompatActivity {
                         navController.navigate(R.id.menuWeather);
                         break;
                     }
+                    case R.id.menuLogout:
+                    {
+                        // Perform log out action here
+                        navController.navigate(R.id.loginPage);
+                        Toast.makeText(MainActivity.this, "Log out Selected", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
                     case R.id.Privacy:
                     {
                         Toast.makeText(MainActivity.this, "Market Selected", Toast.LENGTH_SHORT).show();
@@ -81,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Settings Selected", Toast.LENGTH_SHORT).show();
                         break;
                     }
-
                 }
                 return false;
             }

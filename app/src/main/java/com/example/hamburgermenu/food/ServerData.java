@@ -1,21 +1,26 @@
 package com.example.hamburgermenu.food;
 
 public class ServerData {
-    static String[] newsTitle;
-    static String[] newsDate;
-
+    static String[] foodTitleArray;
+    static String[] locationArray;
+    static String[] foodImageArray;
 
     //Constructor Method
-    public ServerData(String[] array1, String[] array2) {
-        this.newsTitle = array1;
-        this.newsDate = array2;
+    public ServerData(String[] foodTitleArray, String[] locationArray, String[] foodImageArray) {
+        this.foodTitleArray = foodTitleArray;
+        this.locationArray = locationArray;
+        this.foodImageArray = foodImageArray;
     }
 
-    public static String[] getNewsTitle() {
-        return newsTitle;
+    public static String[] getFoodTitleArray() {
+        return foodTitleArray;
     }
 
-    public String[] getNewsDate() {
-        return newsDate;
+    public static String[] getLocationArray() {
+        return locationArray;
+    }
+
+    public static String[] getFoodImageArray() {
+        return foodImageArray;
     }
 }

@@ -27,24 +27,23 @@
 
             <ImageView
                 android:id="@+id/foodImage"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/arduino_uno" />
+                app:srcCompat="@drawable/hamburger" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/food_item"
                 android:layout_width="142dp"
                 android:layout_height="18dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="84dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif"
                 android:gravity="start"
-                android:text="@string/product_name"
+                android:text="@string/food_item"
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
@@ -55,34 +54,15 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/item_price"
+                android:id="@+id/location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="10dp"
-                android:fontFamily="sans-serif"
-                android:gravity="end"
-                android:text="@string/price"
-                android:textAlignment="textEnd"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/item_seller"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/foodImage"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-            <TextView
-                android:id="@+id/item_seller"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/item_price"
-                android:layout_marginEnd="2dp"
+                android:layout_below="@id/food_item"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="16dp"
                 android:layout_toEndOf="@id/foodImage"
                 android:fontFamily="sans-serif"
-                android:text="@string/seller_nickname"
+                android:text="@string/location"
                 android:textAlignment="textEnd"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
@@ -90,7 +70,7 @@
                 android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.927"
+                app:layout_constraintHorizontal_bias="0.944"
                 app:layout_constraintStart_toEndOf="@+id/foodImage"
                 app:layout_constraintTop_toBottomOf="@+id/item_price" />
 

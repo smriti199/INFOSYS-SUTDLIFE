@@ -19,7 +19,7 @@
         android:id="@+id/HomeFragment"
         android:name="com.example.hamburgermenu.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/home_page" />
     <fragment
         android:id="@+id/FoodFragment"
         android:name="com.example.hamburgermenu.food.FoodFragment"

@@ -24,50 +24,29 @@
     <string name="news">Newsletter</string>
     <string name="click_to_login">Click to Login</string>
     <string name="register_now">Register Now</string>
+    <string name="food_item">Food Item</string>
+    <string name="location">Location</string>
 
-    <string-array name="newsTitlesArray">
-        <item>testmarket1</item>
-        <item>testmarket2</item>
-        <item>testmarket3</item>
-        <item>testmarket4</item>
-        <item>testmarket5</item>
-        <item>testmarket6</item>
-        <item>testmarket7</item>
-        <item>testmarket8</item>
-        <item>testmarket9</item>
-        <item>testmarket10</item>
-        <item>testmarket11</item>
-        <item>testmarket12</item>
-        <item>testmarket13</item>
-        <item>testmarket14</item>
-        <item>testmarket15</item>
-        <item>testmarket16</item>
-        <item>testmarket17</item>
-        <item>testmarket18</item>
-        <item>testmarket19</item>
-        <item>testmarket20</item>
+    <string-array name="foodTitleArray">
+        <item>Burger</item>
+        <item>Sandwiches</item>
+        <item>Chicken Rice</item>
+        <item>Ban Mian</item>
+        <item>Nasi Lemak</item>
+        <item>Pizza</item>
+        <item>Seng Kee Herbal Chicken Soup</item>
+        <item>Labula Mala Hotpot</item>
+
     </string-array>
-    <string-array name="newsDateArray">
-        <item>date1</item>
-        <item>date2</item>
-        <item>date3</item>
-        <item>date4</item>
-        <item>date5</item>
-        <item>date6</item>
-        <item>date7</item>
-        <item>date8</item>
-        <item>date9</item>
-        <item>date10</item>
-        <item>date11</item>
-        <item>date12</item>
-        <item>date13</item>
-        <item>date14</item>
-        <item>date15</item>
-        <item>date16</item>
-        <item>date17</item>
-        <item>date18</item>
-        <item>date19</item>
-        <item>date20</item>
+    <string-array name="locationArray">
+        <item>CCP Burger King</item>
+        <item>Campus Centre Level 1</item>
+        <item>Canteen</item>
+        <item>Canteen</item>
+        <item>Canteen</item>
+        <item>DStar Bistro</item>
+        <item>475 Changi Rd, S(419892)</item>
+        <item>822 Tampines Street 81, S(520822)</item>
     </string-array>
 
 </resources>

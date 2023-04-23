@@ -18,8 +18,6 @@ import java.util.Iterator;
 
 public class FetchDataTask extends AsyncTask<Void, Void, ServerData> {
 
-
-
     protected ServerData doInBackground(Void... params) {
         try {
             // Create a URL object for the desired URL
@@ -48,7 +46,6 @@ public class FetchDataTask extends AsyncTask<Void, Void, ServerData> {
             JSONObject jsonObj = new JSONObject(jsonStr);
             Iterator<String> keys = jsonObj.keys();
 
-
             ArrayList<String> newsTitle = new ArrayList<String>();
             ArrayList<String> newsDate = new ArrayList<String>();
 
@@ -56,19 +53,18 @@ public class FetchDataTask extends AsyncTask<Void, Void, ServerData> {
                 // date becomes information
                 // name becomes title
 
-
-
                 String key = keys.next();
 
                 newsTitle.add(jsonObj.getJSONObject(key).getString("title"));
                 newsDate.add(jsonObj.getJSONObject(key).getString("information"));
             }
 
-            String[] newsTitleArray = newsTitle.toArray(new String[0]);
-            String[] newsDateArray = newsDate.toArray(new String[0]);
+            String[] foodTitleArray = newsTitle.toArray(new String[0]);
+            String[] locationArray = newsDate.toArray(new String[0]);
+            String[] foodImageArray = newsDate.toArray(new String[0]);
 
             // Return the JSON data as a string
-            ServerData returnData = new ServerData(newsTitleArray, newsDateArray);
+            ServerData returnData = new ServerData(foodTitleArray, locationArray, foodImageArray);
             return returnData;
 
         } catch (Exception e) {
@@ -77,7 +73,6 @@ public class FetchDataTask extends AsyncTask<Void, Void, ServerData> {
             return null;
         }
     }
-
 
     public interface DataListener {
         void onDataFetched(ServerData data);
