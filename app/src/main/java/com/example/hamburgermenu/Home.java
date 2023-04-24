@@ -11,13 +11,13 @@ import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.hamburgermenu.food.FoodFragment;
 import com.example.hamburgermenu.market.MarketplaceFragment;
 import com.example.hamburgermenu.news.NewsFragment;
+import com.example.hamburgermenu.weather.WeatherFragment;
 
 import java.util.ArrayList;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Home extends AppCompatActivity implements View.OnClickListener {
-    ArrayList<news_banner> news_banners = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +58,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new NewsFragment()).commit();
                 break;
             case R.id.dashboardDiscussions:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new DiscussionFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new WeatherFragment()).commit();
                 break;
         }
     }
