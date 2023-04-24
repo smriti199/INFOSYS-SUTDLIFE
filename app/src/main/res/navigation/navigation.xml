@@ -3,21 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/loginPage">
 
     <fragment
-        android:id="@+id/loginFragment"
+        android:id="@+id/loginPage"
         android:name="com.example.hamburgermenu.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/activity_login_page" />
     <fragment
-        android:id="@+id/registrationFragment"
+        android:id="@+id/registrationPage"
         android:name="com.example.hamburgermenu.RegistrationFragment"
         android:label="fragment_registration"
-        tools:layout="@layout/fragment_registration" />
+        tools:layout="@layout/activity_registration" />
     <fragment
         android:id="@+id/HomeFragment"
-        android:name="com.example.hamburgermenu.HomeFragment"
+        android:name="com.example.hamburgermenu.Home"
         android:label="fragment_home"
         tools:layout="@layout/home_page" />
     <fragment
@@ -37,7 +37,7 @@
         tools:layout="@layout/fragment_news_main" />
     <fragment
         android:id="@+id/DiscussionsFragment"
-        android:name="com.example.hamburgermenu.DiscussionFragment"
+        android:name="com.example.hamburgermenu.weather.WeatherFragment"
         android:label="fragment_home4"
         tools:layout="@layout/fragment_weather" />
     <fragment

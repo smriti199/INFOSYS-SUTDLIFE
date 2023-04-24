@@ -1,4 +1,4 @@
-package com.example.hamburgermenu;
+package com.example.hamburgermenu.weather;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,8 +9,12 @@ import android.widget.Button;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import com.example.hamburgermenu.R;
 
-public class DiscussionFragment extends Fragment {
+
+public class WeatherFragment extends Fragment {
+
+    // API Key -- ea0d26bf4bec419ca07a468a48877199
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

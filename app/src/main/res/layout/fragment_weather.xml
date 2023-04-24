@@ -1,22 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/menuWeather"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/beige"
-    tools:context=".DiscussionFragment">
+    tools:context=".weather.WeatherFragment">
+    
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idPBLoading"
+        android:layout_centerInParent="true"
+        android:visibility="gone"></ProgressBar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idRLHome"
+        android:visibility="visible"
+        ></RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@color/black_shade1"
+        android:id="@+id/idIVBlack"></ImageView>
 
     <TextView
-        android:id="@+id/home4"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="this is homepage category 4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="City Name"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:padding="20dp"
+        android:textSize="18sp"
+        android:id="@+id/idTVCityName"></TextView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/idLLEdt"
+        android:layout_below="@id/idTVCityName"
+        android:weightSum="5"></LinearLayout>
+    
+
+
+
+
 
     <Button
         android:id="@+id/buttontohome"
@@ -28,6 +65,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/home4" />
 
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

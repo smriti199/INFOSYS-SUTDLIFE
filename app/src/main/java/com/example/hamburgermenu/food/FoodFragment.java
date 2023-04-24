@@ -28,9 +28,14 @@ public class FoodFragment extends Fragment implements FetchDataTask.DataListener
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_food, container, false);
         // Inflate the layout for this fragment -- food fragment which simply contains the recyclerview
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.food_recycler_view);
         setUpFoodListings();
-        return inflater.inflate(R.layout.fragment_food, container, false);
+        RecycleViewAdapter adapter = new RecycleViewAdapter(getContext(), food_listings);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        return view;
     }
 
     public void onViewCreated(View view, Bundle savedInstanceState) {
@@ -63,7 +68,6 @@ public class FoodFragment extends Fragment implements FetchDataTask.DataListener
 
         for (int i=0; i< foodTitleArray.length; i++) {
             food_listings.add(new Food_listing(foodTitleArray[i], foodLocationArray[i], food_images[i])); // an array of Food_listing objects
-
         }
     }
 

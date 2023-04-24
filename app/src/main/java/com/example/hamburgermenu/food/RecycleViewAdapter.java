@@ -15,11 +15,11 @@ import java.util.ArrayList;
 
 public class RecycleViewAdapter<V extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<RecycleViewAdapter.MyViewHolder> {
     Context context;
-    ArrayList<Food_listing> Food_listings;
+    ArrayList<Food_listing> food_listings;
 
     public RecycleViewAdapter(Context context , ArrayList<Food_listing> Food_listings){
         this.context = context;
-        this.Food_listings = Food_listings;
+        this.food_listings = Food_listings;
     }
 
     @NonNull
@@ -35,15 +35,15 @@ public class RecycleViewAdapter<V extends RecyclerView.ViewHolder> extends Recyc
     public void onBindViewHolder(@NonNull RecycleViewAdapter.MyViewHolder holder, int position) {
         // assigning values to the views we created in the food_recycler_view layout file
         // based on the position of the view
-        holder.foodItem.setText(Food_listings.get(position).getFoodTitle());
-        holder.location.setText(Food_listings.get(position).getLocation());
-        holder.foodImage.setImageResource(Food_listings.get(position).getFoodImage());
+        holder.foodItem.setText(food_listings.get(position).getFoodTitle());
+        holder.location.setText(food_listings.get(position).getLocation());
+        holder.foodImage.setImageResource(food_listings.get(position).getFoodImage());
     }
 
     @Override
     public int getItemCount() {
         // recycleView needs to know how many items we want displayed
-        return Food_listings.size();
+        return food_listings.size();
     }
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         // like onCreate, we are grabbing views from our recycle_view_row layout file
